@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Amazon Clone</h2>
+  <input type="text" id="searchBox" placeholder="Search products..." onkeyup="searchProducts()">
+  <button onclick="location.href='cart.html'">Cart (<span id="cartCount">0</span>)</button>
+  <button onclick="toggleDarkMode()">🌓 Dark Mode</button>
+  <button onclick="location.href='login.html'">Login</button>
+</header>
+
+<div id="productList" class="products"></div>
+
+<script src="script.js"></script>
+<script>
+loadProducts();
+</script>
+
+</body>
+</html>

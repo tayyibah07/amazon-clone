@@ -1,0 +1,118 @@
+/* BODY & FONT */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #0c8e9c;       /* Orange header */
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+header button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #030737;      /* Blue buttons */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+header button:hover {
+  background: #0f4c8a;
+}
+
+/* PRODUCT GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* PRODUCT CARD */
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+body.dark-mode .product {
+  background: #333;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* PRODUCT BUTTONS */
+.product button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #08b3bc;    /* Orange buttons */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product button:hover {
+  background: #e68a00;
+}
+
+/* QUANTITY INPUT */
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
